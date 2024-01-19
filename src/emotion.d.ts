@@ -13,11 +13,13 @@ declare module '@emotion/react' {
       offWhite3: string;
       offWhite4: string;
       black: string;
+      offBlack0: string;
       offBlack1: string;
       offBlack2: string;
       offBlack3: string;
       offBlack4: string;
       offBlack5: string;
+      offBlack6: string;
     };
     images: {
       bannerImage: string;
