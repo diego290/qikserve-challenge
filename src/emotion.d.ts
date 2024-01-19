@@ -7,6 +7,17 @@ declare module '@emotion/react' {
       primaryColourHover: string;
       backgroundColour: string;
       navBackgroundColour: string;
+      white: string;
+      offWhite1: string;
+      offWhite2: string;
+      offWhite3: string;
+      offWhite4: string;
+      black: string;
+      offBlack1: string;
+      offBlack2: string;
+      offBlack3: string;
+      offBlack4: string;
+      offBlack5: string;
     };
     images: {
       bannerImage: string;

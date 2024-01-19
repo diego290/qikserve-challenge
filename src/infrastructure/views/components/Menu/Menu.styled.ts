@@ -14,13 +14,13 @@ const MenuButton = styled.button`
   font-size: 20px;
   font-family: inherit;
   background-color: transparent;
-  color: #FFFFFF;
+  color: ${props => props.theme.colors.white};
   cursor: pointer;
   box-shadow: inset 0 -3px 0 0 transparent;
   transition: box-shadow 0.3s;
 
   &:hover {
-    box-shadow: inset 0 -3px 0 0 #FFFFFF;
+    box-shadow: inset 0 -3px 0 0 ${props => props.theme.colors.white};
   }
 `;
 
