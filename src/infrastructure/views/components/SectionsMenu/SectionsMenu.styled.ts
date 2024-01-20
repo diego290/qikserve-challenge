@@ -13,7 +13,7 @@ const ImageCircle = styled.div`
   width: 74px;
   height: 74px;
   border-radius: 50%;
-  background-image: url('https://preodemo.gumlet.io/usr/venue/7602/section/646fbe4c64a6f.png');
+  background-image: url('');
   background-size: cover;
   background-position: center;
   background-color: ${props => props.theme.colors.white};
