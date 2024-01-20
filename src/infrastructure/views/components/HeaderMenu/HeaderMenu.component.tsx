@@ -1,4 +1,4 @@
-import { MenuStyled } from './HeaderMenu.styled'
+import { MenuStyled } from './HeaderMenu.styled';
 
 
 function HeaderMenu() {
@@ -9,7 +9,7 @@ function HeaderMenu() {
       <MenuStyled.MenuButton>ENTRAR</MenuStyled.MenuButton>
       <MenuStyled.MenuButton>CONTATO</MenuStyled.MenuButton>
     </MenuStyled.Container>
-  )
+  );
 }
 
-export default HeaderMenu
+export default HeaderMenu;

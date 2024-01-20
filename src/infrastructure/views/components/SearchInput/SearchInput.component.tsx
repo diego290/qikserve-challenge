@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { SearchInputStyled } from './SearchInput.styled'
+import { SearchInputStyled } from './SearchInput.styled';
 
 interface Props {
   placeholder: string
@@ -21,7 +21,7 @@ function SearchInput({ placeholder }: Props) {
         onChange={handleChange}
       />
     </SearchInputStyled.SearchContainer>
-  )
+  );
 }
 
-export default SearchInput
+export default SearchInput;

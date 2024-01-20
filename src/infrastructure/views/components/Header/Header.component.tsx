@@ -1,5 +1,5 @@
-import HeaderMenu from '../HeaderMenu/HeaderMenu.component'
-import { HeaderStyled } from './Header.styled'
+import HeaderMenu from '../HeaderMenu/HeaderMenu.component';
+import { HeaderStyled } from './Header.styled';
 
 
 function Header() {
@@ -9,7 +9,7 @@ function Header() {
       <HeaderMenu />
       <HeaderStyled.ImgContainer />
     </>
-  )
+  );
 }
 
 export default Header;

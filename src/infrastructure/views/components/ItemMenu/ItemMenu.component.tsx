@@ -1,4 +1,4 @@
-import { ItemMenuStyled } from './ItemMenu.styled'
+import { ItemMenuStyled } from './ItemMenu.styled';
 
 interface Props {
   title: string;

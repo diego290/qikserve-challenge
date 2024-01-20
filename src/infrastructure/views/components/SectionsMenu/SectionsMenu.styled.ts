@@ -18,14 +18,14 @@ const ImageCircle = styled.div`
   background-position: center;
   background-color: ${props => props.theme.colors.white};
   box-shadow:
-    0 0 0 4px ${props => props.theme.colors.white}
-    0 0 0 6px ${props => props.theme.colors.primaryColour} transparent;
+    0 0 0 2px ${props => props.theme.colors.white}
+    0 0 0 4px ${props => props.theme.colors.primaryColour} transparent;
   transition: box-shadow 0.3s;
 
   &.selected {
     box-shadow:
-    0 0 0 4px ${props => props.theme.colors.white},
-    0 0 0 6px ${props => props.theme.colors.primaryColour};
+    0 0 0 2px ${props => props.theme.colors.white},
+    0 0 0 4px ${props => props.theme.colors.primaryColour};
   }
 `;
 
