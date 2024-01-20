@@ -1,0 +1,36 @@
+[
+  {
+    "request": {
+      "_comment": "get menu details successfully",
+      "url": "^/menu-details$",
+      "query": {},
+      "post": null,
+      "method": "GET"
+    },
+    "response": {
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/json",
+        "Acess-Control-Allow-Origin": "*"
+      },
+      "file": "data/menu-details.json"
+    }
+  },
+  {
+    "request": {
+      "_comment": "get restaurant details successfully",
+      "url": "^/restaurant-details$",
+      "query": {},
+      "post": null,
+      "method": "GET"
+    },
+    "response": {
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/json",
+        "Acess-Control-Allow-Origin": "*"
+      },
+      "file": "data/restaurant-details.json"
+    }
+  }
+]
