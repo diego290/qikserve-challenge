@@ -1,4 +1,4 @@
-import Menu from '../Menu/Menu.component'
+import HeaderMenu from '../HeaderMenu/HeaderMenu.component'
 import { HeaderStyled } from './Header.styled'
 
 
@@ -6,7 +6,7 @@ function Header() {
 
   return (
     <>
-      <Menu />
+      <HeaderMenu />
       <HeaderStyled.ImgContainer />
     </>
   )
