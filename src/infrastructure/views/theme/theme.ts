@@ -19,6 +19,7 @@ const theme = {
     offBlack4: '#bbbbbb',
     offBlack5: '#8A94A4',
     offBlack6: '#121212',
+    offBlack7: '#464646',
   },
   images: {
     bannerImage: 'https://preodemo.gumlet.io/usr/venue/7602/web/646fbf3abf9d0.png'

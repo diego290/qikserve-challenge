@@ -20,6 +20,7 @@ declare module '@emotion/react' {
       offBlack4: string;
       offBlack5: string;
       offBlack6: string;
+      offBlack7: string;
     };
     images: {
       bannerImage: string;
