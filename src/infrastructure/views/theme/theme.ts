@@ -10,6 +10,7 @@ const theme = {
     offWhite2: '#f0f0f0',
     offWhite3: '#e8e8e8',
     offWhite4: '#d8d8d8',
+    offWhite5: '#eeeeee',
 
     black: '#000000',
     offBlack0: '#2C2C2C',
