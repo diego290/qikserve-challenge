@@ -2,7 +2,7 @@
   {
     "request": {
       "_comment": "get menu details successfully",
-      "url": "^/menu-details$",
+      "url": "^/menu$",
       "query": {},
       "post": null,
       "method": "GET"
@@ -19,7 +19,7 @@
   {
     "request": {
       "_comment": "get restaurant details successfully",
-      "url": "^/restaurant-details$",
+      "url": "^/venue/9$",
       "query": {},
       "post": null,
       "method": "GET"
