@@ -1,15 +1,14 @@
-import { useState } from 'react';
 import { SearchInputStyled } from './SearchInput.styled';
 
 interface Props {
-  placeholder: string
+  placeholder: string;
+  onChange: (text: string) => void;
 }
 
-function SearchInput({ placeholder }: Props) {
-  const [message, setMessage] = useState("");
+function SearchInput({ placeholder, onChange }: Props) {
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setMessage(event.target.value);
+    onChange(event.target.value);
   };
 
   return (
@@ -17,7 +16,6 @@ function SearchInput({ placeholder }: Props) {
       <SearchInputStyled.Icon />
       <SearchInputStyled.SearchInput
         placeholder={placeholder}
-        value={message}
         onChange={handleChange}
       />
     </SearchInputStyled.SearchContainer>

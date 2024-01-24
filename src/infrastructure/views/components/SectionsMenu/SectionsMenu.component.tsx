@@ -1,18 +1,20 @@
-import { useState } from 'react';
 import { SectionsMenuStyled } from './SectionsMenu.styled';
 
 interface Props {
   title: string;
   imageUrl: string;
+  onClick: () => void;
+  isSelected: boolean;
 }
 
-function SectionsMenu({ title, imageUrl }: Props) {
-  const [isSelected, setIsSelected] = useState(false);
+function SectionsMenu({ title, imageUrl, onClick, isSelected }: Props) {
 
-  const toggleSelect = () => setIsSelected(!isSelected);
+  const handleClicked = () => {
+    onClick();
+  };
 
   return (
-    <SectionsMenuStyled.SectionsMenuContainer onClick={toggleSelect}>
+    <SectionsMenuStyled.SectionsMenuContainer onClick={handleClicked}>
       <SectionsMenuStyled.ImageCircle className={isSelected ? 'selected' : ''} style={{ backgroundImage: `url(${imageUrl})` }} />
       <SectionsMenuStyled.Text className={isSelected ? 'selected' : ''}>{title}</SectionsMenuStyled.Text>
       <SectionsMenuStyled.Line className={isSelected ? 'selected' : ''} />

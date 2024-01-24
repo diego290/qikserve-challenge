@@ -8,6 +8,27 @@ const ItemContainer = styled.div`
   justify-content: space-between;
   max-height: 117px;
   background-color: inherit;
+  cursor: pointer;
+`;
+
+const QuantityTitleContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+`;
+
+const Quantity = styled.span`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  width: 19px;
+  height: 19px;
+  color: ${props => props.theme.colors.white};
+  background-color: ${props => props.theme.colors.primaryColour};
+  padding-top: 1px;
+  border-radius: 6px;
 `;
 
 const TextContainer = styled.div`
@@ -56,4 +77,13 @@ const ItemImage = styled.div`
   border-radius: 6px;
 `;
 
-export const ItemMenuStyled = { ItemContainer, TextContainer, Title, Description, Price, ItemImage };
+export const ItemMenuStyled = {
+  ItemContainer,
+  TextContainer,
+  QuantityTitleContainer,
+  Quantity,
+  Title,
+  Description,
+  Price,
+  ItemImage
+};

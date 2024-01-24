@@ -1,3 +1,4 @@
+import { formatPrice } from '../../../../utils/formatPrice';
 import { ItemMenuStyled } from './ItemMenu.styled';
 
 interface Props {
@@ -5,19 +6,19 @@ interface Props {
   description: string;
   price: number;
   imageUrl: string
+  quantity: number;
+  openDetails: () => void;
 }
 
-function ItemMenu({ title, description, price, imageUrl }: Props) {
-
-  function formatPrice(priceNumber: number) {
-    const formattedPrice = priceNumber.toFixed(2).replace('.', ',');
-    return `R$ ${formattedPrice}`;
-  }
+function ItemMenu({ title, description, price, imageUrl, quantity, openDetails }: Props) {
 
   return (
-    <ItemMenuStyled.ItemContainer>
+    <ItemMenuStyled.ItemContainer onClick={openDetails}>
       <ItemMenuStyled.TextContainer>
-        <ItemMenuStyled.Title>{title}</ItemMenuStyled.Title>
+        <ItemMenuStyled.QuantityTitleContainer>
+          {quantity > 0 && <ItemMenuStyled.Quantity>{quantity}</ItemMenuStyled.Quantity>}
+          <ItemMenuStyled.Title>{title}</ItemMenuStyled.Title>
+        </ItemMenuStyled.QuantityTitleContainer>
         <ItemMenuStyled.Description>{description}</ItemMenuStyled.Description>
         <ItemMenuStyled.Price>{formatPrice(price)}</ItemMenuStyled.Price>
       </ItemMenuStyled.TextContainer>

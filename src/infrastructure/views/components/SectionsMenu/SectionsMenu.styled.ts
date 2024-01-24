@@ -2,7 +2,6 @@ import styled from '@emotion/styled';
 
 const SectionsMenuContainer = styled.div`
   display: flex;
-  margin-top: 30px;
   width: 104px;
   flex-direction: column;
   align-items: center;
