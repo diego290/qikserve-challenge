@@ -1,9 +1,9 @@
 const theme = {
   colors: {
-    primaryColour: '#4f372f',
-    primaryColourHover: '#4f372f',
-    backgroundColour: '#ffffff',
-    navBackgroundColour: '#4f372f',
+    primaryColour: '',
+    primaryColourHover: '',
+    backgroundColour: '',
+    navBackgroundColour: '',
 
     white: '#ffffff',
     offWhite1: '#f8f8f8',
@@ -26,7 +26,7 @@ const theme = {
     offBlack8: '#5F5F5F',
   },
   images: {
-    bannerImage: 'https://preodemo.gumlet.io/usr/venue/7602/web/646fbf3abf9d0.png'
+    bannerImage: ''
   }
 };
 
