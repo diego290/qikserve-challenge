@@ -1,19 +1,21 @@
 import { ThemeProvider } from '@emotion/react';
-import Header from './infrastructure/views/components/Header/Header.component';
+import { Provider } from 'react-redux';
 import useTheme from './infrastructure/hooks/useTheme';
+import MenuPage from './infrastructure/views/pages/MenuPage.page';
+import { store } from './infrastructure/redux/store';
 
-import './App.scss'
+import './App.scss';
 
 function App() {
   const theme = useTheme();
 
   return (
-    <ThemeProvider theme={theme}>
-      <div style={{ width: "100vw", maxWidth: "1440px" }}>
-        <Header />
-      </div>
-    </ThemeProvider>
-  )
+    <Provider store={store}>
+      <ThemeProvider theme={theme}>
+        <MenuPage />
+      </ThemeProvider>
+    </Provider>
+  );
 }
 
-export default App
+export default App;
