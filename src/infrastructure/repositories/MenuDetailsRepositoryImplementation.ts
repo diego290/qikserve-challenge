@@ -8,7 +8,7 @@ export default class MenuDetailsRepositoryImplementation implements MenuDetailsR
     try {
       const { data } = await axios({
         method: 'get',
-        url: `${import.meta.env.VITE_APP_API_URL}/menu`,
+        url: `${process.env.VITE_APP_API_URL}/menu`,
       });
       if (data) {
         return data;

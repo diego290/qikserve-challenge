@@ -8,7 +8,7 @@ export default class RestaurantDetailsRepositoryImplementation implements Restau
     try {
       const { data } = await axios({
         method: 'get',
-        url: `${import.meta.env.VITE_APP_API_URL}/venue/9`,
+        url: `${process.env.VITE_APP_API_URL}/venue/9`,
       });
       if (data) {
         return data;

@@ -32,7 +32,6 @@ export const itemCartSlice = createSlice({
         cartItem.uniqueKey === uniqueKey &&
         (cartItem.selectedModifier?.id === selectedModifier?.id || (!cartItem.selectedModifier && !selectedModifier))
       );
-      console.log('existingCartItemIndex', existingCartItemIndex);
       if (existingCartItemIndex !== -1) {
         state.itemsWithQuantityAndModifier[existingCartItemIndex].quantity += quantity;
       } else {
