@@ -1,7 +1,7 @@
 import { MenuDetailsModel } from '../../domain/models/MenuDetailsModel';
 import { MenuDetailsUseCases } from '../../domain/useCases/MenuDetailsUseCases';
 
-export default class CancellationReasonsController {
+export default class MenuDetailsController {
   static async getMenuDetails(): Promise<MenuDetailsModel> {
     const menuDetails = new MenuDetailsUseCases();
 

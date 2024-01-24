@@ -1,5 +1,4 @@
-import axios, { AxiosResponse } from 'axios';
-import { ResponseModel } from './models/ResponseModel';
+import axios from 'axios';
 import { APIError } from './errors/APIError';
 import { MenuDetailsModel } from '../../domain/models/MenuDetailsModel';
 import { MenuDetailsRepository } from '../../domain/ports/MenuDetailsRepository';
@@ -7,13 +6,12 @@ import { MenuDetailsRepository } from '../../domain/ports/MenuDetailsRepository'
 export default class MenuDetailsRepositoryImplementation implements MenuDetailsRepository {
   public async getMenuDetails(): Promise<MenuDetailsModel> {
     try {
-      const { data }: AxiosResponse<ResponseModel<MenuDetailsModel>> =
-        await axios({
-          method: 'get',
-          url: `${import.meta.env.VITE_APP_API_URL}/menu-details`,
-        });
-      if (data.data) {
-        return new MenuDetailsModel(data.data);
+      const { data } = await axios({
+        method: 'get',
+        url: `${import.meta.env.VITE_APP_API_URL}/menu`,
+      });
+      if (data) {
+        return data;
       }
       throw new APIError(undefined, data);
     } catch (err: any) {
@@ -22,7 +20,10 @@ export default class MenuDetailsRepositoryImplementation implements MenuDetailsR
   }
 
   private static getError(err: any) {
-    const error = new APIError(undefined, err.response.data);
-    return error;
+    if (err.response?.data) {
+      return new APIError(undefined, err.response.data);
+    } else {
+      return new APIError(undefined, 'Unknown error occurred');
+    }
   }
 }

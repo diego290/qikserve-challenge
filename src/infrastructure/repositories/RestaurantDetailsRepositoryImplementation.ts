@@ -10,7 +10,7 @@ export default class RestaurantDetailsRepositoryImplementation implements Restau
       const { data }: AxiosResponse<ResponseModel<RestaurantDetailsModel>> =
         await axios({
           method: 'get',
-          url: `${import.meta.env.VITE_APP_API_URL}/restaurant-details`,
+          url: `${import.meta.env.VITE_APP_API_URL}/venue/9`,
         });
       if (data.data) {
         return new RestaurantDetailsModel(data.data);
@@ -22,7 +22,10 @@ export default class RestaurantDetailsRepositoryImplementation implements Restau
   }
 
   private static getError(err: any) {
-    const error = new APIError(undefined, err.response.data);
-    return error;
+    if (err.response?.data) {
+      return new APIError(undefined, err.response.data);
+    } else {
+      return new APIError(undefined, 'Unknown error occurred');
+    }
   }
 }

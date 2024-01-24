@@ -56,7 +56,7 @@ interface MenuApiResponse {
   sections: Section[];
 }
 
-class ImageModel implements Image {
+export class ImageModel implements Image {
   id: number;
   image: string;
 
@@ -66,7 +66,7 @@ class ImageModel implements Image {
   }
 }
 
-class ModifierItemModel implements ModifierItem {
+export class ModifierItemModel implements ModifierItem {
   id: number;
   name: string;
   price: number;
@@ -90,7 +90,7 @@ class ModifierItemModel implements ModifierItem {
   }
 }
 
-class ModifierModel implements Modifier {
+export class ModifierModel implements Modifier {
   id: number;
   name: string;
   minChoices: number;
@@ -106,7 +106,7 @@ class ModifierModel implements Modifier {
   }
 }
 
-class ItemModel implements Item {
+export class ItemModel implements Item {
   id: number;
   name: string;
   description?: string;
@@ -136,7 +136,7 @@ class ItemModel implements Item {
   }
 }
 
-class SectionModel implements Section {
+export class SectionModel implements Section {
   id: number;
   name: string;
   description?: string;
