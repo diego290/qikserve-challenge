@@ -5,10 +5,10 @@ import { HeaderStyled } from './Header.styled';
 function Header() {
 
   return (
-    <>
+    <div data-testid="header">
       <HeaderMenu />
-      <HeaderStyled.ImgContainer />
-    </>
+      <HeaderStyled.ImgContainer data-testid="image-banner" />
+    </div>
   );
 }
 
