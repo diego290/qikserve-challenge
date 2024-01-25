@@ -40,14 +40,14 @@ function QuantityControl({ size, currentQuantity, onQuantityChange, onRemoveItem
   };
 
   return (
-    <QuantityControlStyled.Container size={size}>
-      <QuantityControlStyled.DecrementButton size={size} onClick={decrement}>
+    <QuantityControlStyled.Container size={size} data-testid="quantity-control">
+      <QuantityControlStyled.DecrementButton size={size} onClick={decrement} data-testid="decrement-button">
         <MdDoDisturbOn />
       </QuantityControlStyled.DecrementButton>
-      <QuantityControlStyled.QuantityDisplay size={size}>
+      <QuantityControlStyled.QuantityDisplay size={size} data-testid="quantity-display">
         {quantity}
       </QuantityControlStyled.QuantityDisplay>
-      <QuantityControlStyled.IncrementButton size={size} onClick={increment}>
+      <QuantityControlStyled.IncrementButton size={size} onClick={increment} data-testid="increment-button">
         <MdAddCircle />
       </QuantityControlStyled.IncrementButton>
     </QuantityControlStyled.Container>
