@@ -76,7 +76,7 @@ function CartMobile({ closeCartMobile }: Props) {
   return (
     <CartMobileStyled.CartContainer>
       <CartMobileStyled.CartContent>
-        <CartMobileStyled.CloseButton onClick={closeCartMobile}>
+        <CartMobileStyled.CloseButton onClick={closeCartMobile} data-testid="close-cart-button">
           <IoCloseOutline />
         </CartMobileStyled.CloseButton>
         <CartMobileStyled.HeaderCartContainer>
