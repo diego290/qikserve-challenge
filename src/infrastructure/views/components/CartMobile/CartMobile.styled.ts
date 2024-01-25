@@ -65,7 +65,7 @@ const ContentCart = styled.div`
   text-align: left;
   border-bottom: 1px solid ${props => props.theme.colors.offWhite7};
 
-  &:first-child {
+  &:first-of-type {
     padding: 24px 16px 16px 16px;
   }
 
