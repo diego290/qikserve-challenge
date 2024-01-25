@@ -6,9 +6,9 @@ import { ItemModel } from '../../../../domain/models/MenuDetailsModel';
 import { addItemWithQuantityAndModifier } from '../../../redux/itemCart/itemCartSlice';
 import OptionItem from '../OptionItem/OptionItem.component';
 import QuantityControl from '../QuantityControl/QuantityControl.component';
+import Button from '../Button/Button.component';
 
 import { ItemModalStyled } from './ItemModal.styled';
-import Button from '../Button/Button.component';
 
 interface Props {
   item: ItemModel;
@@ -63,9 +63,9 @@ function ItemModal({ item, closeModal }: Props) {
   };
 
   return (
-    <ItemModalStyled.ModalContainer onClick={closeModal}>
+    <ItemModalStyled.ModalContainer onClick={closeModal} data-testid="item-details-modal">
       <ItemModalStyled.ModalContent onClick={(e) => e.stopPropagation()}>
-        <ItemModalStyled.CloseButton onClick={closeModal}>
+        <ItemModalStyled.CloseButton onClick={closeModal} data-testid="close-modal-button">
           <BsFillXCircleFill />
         </ItemModalStyled.CloseButton>
         <ItemModalStyled.ItemImage style={{ backgroundImage: `url(${imageUrl})` }} />
