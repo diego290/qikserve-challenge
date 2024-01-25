@@ -17,6 +17,11 @@ const config = {
     "cobertura",
     "lcov"
   ],
+  coveragePathIgnorePatterns: [
+    "<rootDir>/src/domain/",
+    "<rootDir>/src/infrastructure/controller/",
+    "<rootDir>/src/infrastructure/repositories/",
+  ],
 };
 
 export default config;

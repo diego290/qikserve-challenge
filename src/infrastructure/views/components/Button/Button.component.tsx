@@ -10,7 +10,7 @@ function Button({ name, info, onClick }: Props) {
   const buttonText = info ? `${name} • ${info}` : name;
 
   return (
-    <ButtonStyled.AddToOrderButton onClick={onClick}>
+    <ButtonStyled.AddToOrderButton onClick={onClick} data-testid="add-to-order-button">
       {buttonText}
     </ButtonStyled.AddToOrderButton>
   );
