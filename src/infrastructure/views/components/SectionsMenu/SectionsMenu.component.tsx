@@ -14,10 +14,16 @@ function SectionsMenu({ title, imageUrl, onClick, isSelected }: Props) {
   };
 
   return (
-    <SectionsMenuStyled.SectionsMenuContainer onClick={handleClicked}>
-      <SectionsMenuStyled.ImageCircle className={isSelected ? 'selected' : ''} style={{ backgroundImage: `url(${imageUrl})` }} />
-      <SectionsMenuStyled.Text className={isSelected ? 'selected' : ''}>{title}</SectionsMenuStyled.Text>
-      <SectionsMenuStyled.Line className={isSelected ? 'selected' : ''} />
+    <SectionsMenuStyled.SectionsMenuContainer onClick={handleClicked} data-testid="sections-menu-container">
+      <SectionsMenuStyled.ImageCircle
+        className={isSelected ? 'selected' : ''}
+        style={{ backgroundImage: `url(${imageUrl})` }}
+        data-testid="image-circle"
+      />
+      <SectionsMenuStyled.Text className={isSelected ? 'selected' : ''} data-testid="menu-title">
+        {title}
+      </SectionsMenuStyled.Text>
+      <SectionsMenuStyled.Line className={isSelected ? 'selected' : ''} data-testid="line" />
     </SectionsMenuStyled.SectionsMenuContainer>
   );
 }
