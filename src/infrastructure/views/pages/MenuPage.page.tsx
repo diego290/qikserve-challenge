@@ -130,7 +130,7 @@ function MenuPage() {
 
   const renderSectionTitle = (section: SectionModel) => {
     return (
-      <MenuPageStyled.ItemMenuTitleContainer onClick={() => toggleSection(section.id)}>
+      <MenuPageStyled.ItemMenuTitleContainer onClick={() => toggleSection(section.id)} data-testid="toggle-section">
         <MenuPageStyled.ItemMenuNameContainer>
           {section.name}
         </MenuPageStyled.ItemMenuNameContainer>
@@ -145,15 +145,16 @@ function MenuPage() {
     const cartItem = cartItems.find(ci => ci.item.id === item.id);
     const itemQuantity = cartItem ? cartItem.quantity : 0;
     return (
-      <ItemMenu
-        key={item.id}
-        title={item.name}
-        description={item.description ?? ''}
-        price={item.price}
-        imageUrl={item.images && item.images.length > 0 ? item.images[0].image : ''}
-        quantity={itemQuantity}
-        openDetails={() => openModalDetails(item)}
-      />
+      <div data-testid='open-modal-item-details' key={item.id}>
+        <ItemMenu
+          title={item.name}
+          description={item.description ?? ''}
+          price={item.price}
+          imageUrl={item.images && item.images.length > 0 ? item.images[0].image : ''}
+          quantity={itemQuantity}
+          openDetails={() => openModalDetails(item)}
+        />
+      </div>
     );
   };
 
