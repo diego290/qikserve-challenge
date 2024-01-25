@@ -22,6 +22,7 @@ const OptionItem = ({ name, price, isSelected, onOptionChange, value }: Props) =
         <OptionItemStyled.Price>{formatPrice(price)}</OptionItemStyled.Price>
       </OptionItemStyled.LabelContainer>
       <OptionItemStyled.RadioInput
+        data-testid={`radio-option-${value}`}
         type="radio"
         id={`option-${value}`}
         name="portion"
