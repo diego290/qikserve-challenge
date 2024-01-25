@@ -15,6 +15,7 @@ function SearchInput({ placeholder, onChange }: Props) {
     <SearchInputStyled.SearchContainer>
       <SearchInputStyled.Icon />
       <SearchInputStyled.SearchInput
+        data-testid="search-input"
         placeholder={placeholder}
         onChange={handleChange}
       />
