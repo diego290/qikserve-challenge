@@ -9,10 +9,10 @@
     ],
     "module": "ESNext",
     "skipLibCheck": true,
-    "esModuleInterop": true,
     /* Bundler mode */
     "moduleResolution": "node",
     "allowImportingTsExtensions": true,
+    "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
@@ -23,17 +23,9 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "types": [
-      "jest",
-      "@testing-library/jest-dom",
-      "node"
+      "node",
+      "cypress"
     ]
   },
-  "include": [
-    "src"
-  ],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
-  ]
+  "include": ["../node_modules/cypress", "./**/*", "../cypress.config.ts"]
 }
