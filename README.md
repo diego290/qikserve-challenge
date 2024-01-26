@@ -1,3 +1,6 @@
+Nome: Diego Rodrigues
+e-mail: diegorodrigues290@hotmail.com
+
 ## English
 
 # Introduction
