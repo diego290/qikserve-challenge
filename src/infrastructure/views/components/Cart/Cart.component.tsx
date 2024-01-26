@@ -38,7 +38,10 @@ function Cart() {
       <>
         <CartStyled.ContainerCart>
           {cartItems.map((cartItem, index) => (
-            <CartStyled.ContentCart key={`${cartItem.item.id}-${cartItem.selectedModifier?.id ? cartItem.selectedModifier?.id : index}`}>
+            <CartStyled.ContentCart
+              data-testid="cart-item"
+              key={`${cartItem.item.id}-${cartItem.selectedModifier?.id ? cartItem.selectedModifier?.id : index}`}
+            >
               <CartItem
                 name={cartItem.item.name}
                 description={cartItem.selectedModifier ? cartItem.selectedModifier.name : ''}
