@@ -1,5 +1,5 @@
-Nome: Diego Rodrigues
-e-mail: diegorodrigues290@hotmail.com
+- Nome: Diego Rodrigues
+- e-mail: diegorodrigues290@hotmail.com
 
 ## English
 
@@ -49,6 +49,8 @@ In each project, the choice of architecture is crucial and should be tailored to
 
   npm install
 ```
+
+### Attention: All commands below must be run separately, never simultaneously
 
 - I created a mock with stubby due to the too many requests issue with the provided API.
 - With locally mock.
@@ -151,6 +153,8 @@ Em cada projeto, a escolha da arquitetura é crucial e deve ser adaptada às sua
 
   npm install
 ```
+
+### Atenção: Todos os comandos abaixo devem ser rodados isoladamente, nunca em simultaneo
 
 - Criei um mock com stubby devido ao problema de muitas solicitações com a API fornecida.
 - Com mock local.
