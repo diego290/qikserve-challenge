@@ -1,5 +1,6 @@
-- Nome: Diego Rodrigues
-- e-mail: diegorodrigues290@hotmail.com
+- Name: Diego Rodrigues
+- E-mail: diegorodrigues290@hotmail.com
+- Published in development: https://qikserve-challenge.vercel.app/
 
 ## English
 
